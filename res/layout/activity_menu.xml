@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".MenuActivity" >
+
+    <TextView
+        android:layout_marginTop="100px"
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speed"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <SeekBar
+        android:layout_marginTop="50px"
+        android:id="@+id/speedBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_marginTop="200px"
+        android:id="@+id/startButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Start" />
+
+</LinearLayout>

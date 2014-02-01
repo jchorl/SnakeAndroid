@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.experimentation"
+    package="com.joshchorlton.snakeandroid"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -14,13 +14,13 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.experimentation.FullscreenActivity"
+            android:name="com.joshchorlton.snakeandroid.FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:theme="@style/FullscreenTheme" >
         </activity>
         <activity
-            android:name="com.example.experimentation.MenuActivity"
+            android:name="com.joshchorlton.snakeandroid.MenuActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:theme="@style/FullscreenTheme" >

@@ -178,4 +178,7 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 		}
 		return false;
 	}
+	public MainThread getThread(){
+		return thread;
+	}
 }

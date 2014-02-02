@@ -10,6 +10,7 @@ import android.view.WindowManager;
 public class FullscreenActivity extends Activity {
 	private static final String TAG= FullscreenActivity.class.getSimpleName();
 	private int speed;
+	private MainGamePanel mp;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -17,13 +18,20 @@ public class FullscreenActivity extends Activity {
 		speed= i.getIntExtra("speed", 50);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		setContentView(new MainGamePanel(this, speed));
+		mp= new MainGamePanel(this, speed);
+		setContentView(mp);
 		Log.d(TAG, "View added");
 	}
 
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
 		super.onPostCreate(savedInstanceState);
+	}
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
+		mp.getThread().setRunning(false);
 	}
 	
 	@Override
